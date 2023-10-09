@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{213003FB-D36A-4958-8FC7-2407268B2ACC}</ProjectGuid>
+    <ProjectGuid>{22F57E32-B26E-494F-B8FB-A8B36DF7CC26}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Buoi_5</RootNamespace>
-    <AssemblyName>Buoi 5</AssemblyName>
+    <RootNamespace>Buoi_4_TH1_Hien_thi_thoi_gian_cua_he_thong</RootNamespace>
+    <AssemblyName>Buoi 4 TH1 Hien thi thoi gian cua he thong</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
