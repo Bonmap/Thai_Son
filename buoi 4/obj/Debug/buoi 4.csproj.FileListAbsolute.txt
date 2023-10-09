@@ -1,0 +1,8 @@
+E:\Lap trinh game\CS_GU2309\Thai_Son\Buoi 4\bin\Debug\buoi 4.exe.config
+E:\Lap trinh game\CS_GU2309\Thai_Son\Buoi 4\bin\Debug\buoi 4.exe
+E:\Lap trinh game\CS_GU2309\Thai_Son\Buoi 4\bin\Debug\buoi 4.pdb
+E:\Lap trinh game\CS_GU2309\Thai_Son\Buoi 4\obj\Debug\buoi 4.csproj.AssemblyReference.cache
+E:\Lap trinh game\CS_GU2309\Thai_Son\Buoi 4\obj\Debug\buoi 4.csproj.CoreCompileInputs.cache
+E:\Lap trinh game\CS_GU2309\Thai_Son\Buoi 4\obj\Debug\buoi 4.exe
+E:\Lap trinh game\CS_GU2309\Thai_Son\Buoi 4\obj\Debug\buoi 4.pdb
+E:\Lap trinh game\CS_GU2309\Thai_Son\Buoi 4\obj\Debug\buoi 4.csproj.SuggestedBindingRedirects.cache
