@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace TH1_Giai_phuong_trinh_bac_nhat
+namespace BT_Tinh_tong_cua_so_co_4_chu_so
 {
     class Program
     {
@@ -9,16 +12,21 @@ namespace TH1_Giai_phuong_trinh_bac_nhat
         {
             Console.InputEncoding = Encoding.Unicode;
             Console.OutputEncoding = Encoding.Unicode;
-            float a;
-            float b;
+            int a;
+            int so_1, so_2, so_3, so_4;
             int luot_dem = 4;
-            Console.WriteLine("Chương trình giải phương trình bậc nhất ax+b=0");
+            Console.WriteLine("Chương trình tính tổng của số 4 chữ số abcd (tổng = ad+bc)");
         nhap_so:
-            Console.WriteLine("Nhập số a và b");
-            if (float.TryParse(Console.ReadLine(), out a) && float.TryParse(Console.ReadLine(), out b))
+            Console.WriteLine("Nhập số 4 con số. Ví dụ: 1248");
+            if (int.TryParse(Console.ReadLine(), out a) && a < 10000)
             {
-                Console.WriteLine("Số a là " + a);
-                Console.WriteLine("Số b là " + b);
+                so_1 = a / 1000;
+                so_2 = a % 1000 / 100;
+                so_3 = a % 100 / 10;
+                so_4 = a - so_1 * 1000 - so_2 * 100 - so_3 * 10;
+                Console.WriteLine("Số bạn nhập " + "số a là " + so_1 + ".số b là " + so_2 + ".số c là " + so_3 + ".số d là " + so_4);
+                int ket_qua = (so_1 * 10 + so_4) + (so_2 * 10 + so_3);
+                Console.WriteLine("Tổng của số ad+bc = "+ ket_qua);
             }
             else
             {
@@ -30,18 +38,6 @@ namespace TH1_Giai_phuong_trinh_bac_nhat
                 }
                 Console.WriteLine("Số bạn nhập không hợp lệ, vui lòng nhập lại (số lần nhập còn lại là " + luot_dem + ")");
                 goto nhap_so;
-            }
-            if (a != 0)
-            {
-                Console.WriteLine("Phương trình có 1 nghiệm là " + Math.Round((-b) / a, 2));
-                Console.WriteLine("Phương trình có 1 nghiệm là " + (-b) / a);
-            }
-            else
-            {
-
-                if (b == 0) Console.WriteLine("Phương trình vô số nghiệm");
-                else Console.WriteLine("Phương trình vô nghiệm");
-
             }
             Console.ReadKey();
             return;

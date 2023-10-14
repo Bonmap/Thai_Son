@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace TH1_Giai_phuong_trinh_bac_nhat
+namespace BT_Kiem_tra_so_chinh_phuong
 {
     class Program
     {
@@ -9,16 +12,20 @@ namespace TH1_Giai_phuong_trinh_bac_nhat
         {
             Console.InputEncoding = Encoding.Unicode;
             Console.OutputEncoding = Encoding.Unicode;
-            float a;
-            float b;
+            int a;
+            int can_bac_hai;
             int luot_dem = 4;
-            Console.WriteLine("Chương trình giải phương trình bậc nhất ax+b=0");
+            Console.WriteLine("Chương trình kiểm tra số chính phương");
         nhap_so:
-            Console.WriteLine("Nhập số a và b");
-            if (float.TryParse(Console.ReadLine(), out a) && float.TryParse(Console.ReadLine(), out b))
+            Console.WriteLine("Vui lòng Nhập số");
+            if (int.TryParse(Console.ReadLine(), out a))
             {
-                Console.WriteLine("Số a là " + a);
-                Console.WriteLine("Số b là " + b);
+                Console.WriteLine("Số bạn nhập là " + a);
+                can_bac_hai = Convert.ToInt16(Math.Sqrt(a));
+                //if (can_bac_hai == Math.Sqrt(a))
+                if (can_bac_hai*can_bac_hai == a)
+                       Console.WriteLine("yes");
+                else Console.WriteLine("no");
             }
             else
             {
@@ -30,18 +37,6 @@ namespace TH1_Giai_phuong_trinh_bac_nhat
                 }
                 Console.WriteLine("Số bạn nhập không hợp lệ, vui lòng nhập lại (số lần nhập còn lại là " + luot_dem + ")");
                 goto nhap_so;
-            }
-            if (a != 0)
-            {
-                Console.WriteLine("Phương trình có 1 nghiệm là " + Math.Round((-b) / a, 2));
-                Console.WriteLine("Phương trình có 1 nghiệm là " + (-b) / a);
-            }
-            else
-            {
-
-                if (b == 0) Console.WriteLine("Phương trình vô số nghiệm");
-                else Console.WriteLine("Phương trình vô nghiệm");
-
             }
             Console.ReadKey();
             return;
