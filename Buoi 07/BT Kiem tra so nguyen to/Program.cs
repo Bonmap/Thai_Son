@@ -4,15 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BT_ve_nha
+namespace BT_Kiem_tra_so_nguyen_to
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            So_nguyen_to();
-        }
-        private static void So_nguyen_to()
         {
             Console.InputEncoding = Encoding.Unicode;
             Console.OutputEncoding = Encoding.Unicode;
@@ -35,7 +31,7 @@ namespace BT_ve_nha
             if (a < 2) Console.WriteLine("số " + a + " không phải là số nguyên tố");
             else
             {
-                for (int i = 2; i*i < a; i++)
+                for (int i = 2; i * i < a; i++)
                 {
                     if (a % i == 0) so_nguyen_to = false;
                     break;
@@ -49,10 +45,5 @@ namespace BT_ve_nha
             Console.WriteLine("Do nhập 4 lần không hợp lệ nên ngày mai bạn vui lòng nhập lại");
             Console.ReadKey();
         }
-        private static void So_chan_trong_khoang()
-        {
-
-        }
     }
 }
-
