@@ -10,7 +10,7 @@ namespace BT_ve_nha
     {
         static void Main(string[] args)
         {
-            Xuat_bang_cua_chuong();
+            xuat_phep_tinh();
         }
         private static void So_nguyen_to()
         {
@@ -247,7 +247,52 @@ namespace BT_ve_nha
             for (int i = 1; i <= 10; i++)
             {
                 Console.WriteLine(a + " x " + i + " = " + (a * i));
-            }    
+            }
+            Console.ReadKey();
+        }
+        private static void Xuat_bang_cua_chuong_tu_2_den_10()
+        {
+            Console.InputEncoding = Encoding.Unicode;
+            Console.OutputEncoding = Encoding.Unicode;
+            string dau_vao;
+            Console.WriteLine("Chương trình xuất ra bảng cửu chương từ 2 đến 10");
+            Console.WriteLine("Vui lòng nhập số bấm 1 phím bất kì để xuất ra");
+            dau_vao = Console.ReadLine();
+            for (int i = 2; i <= 10; i++)
+            {
+                Console.WriteLine("Bảng cửu chương " + i + " :");
+                for (int j = 1; j <= 10; j++)
+                {
+                    Console.WriteLine(i + " x " + j + " = " + (i * j));
+                }
+            }
+            Console.ReadKey();
+        }
+        private static void xuat_phep_tinh()
+        {
+            Console.InputEncoding = Encoding.Unicode;
+            Console.OutputEncoding = Encoding.Unicode;
+            double a = -1;
+            int luot_dem = 4;
+            Console.WriteLine("Chương trình xuất phép tính ...+1/n3");
+            Console.WriteLine("Vui lòng nhập một số nguyên");
+            while (!double.TryParse(Console.ReadLine(), out a))
+            {
+                luot_dem--;
+                Console.WriteLine("Số bạn nhập không hợp lệ, vui lòng nhập lại (số lần nhập còn lại là " + luot_dem + ")");
+                if (luot_dem == 0)
+                {
+                    Console.WriteLine("Bạn đã nhập quá số lần quy định");
+                    Console.ReadKey();
+                    return;
+                }
+            }
+            double ket_qua=0;
+            for(int i=1; i<=a; i++)
+            {
+                ket_qua += 1 / Convert.ToDouble(Math.Pow(i, 3));
+            }
+            Console.WriteLine("Kết quả phép tính: " + Math.Round(ket_qua,3));
             Console.ReadKey();
         }
     }

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34114.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buoi 08_Mang", "Buoi 08_Mang.csproj", "{7AE59045-1640-4526-803E-EAF54106D49E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bai tap ve nha", "Bai tap ve nha\Bai tap ve nha.csproj", "{2FB7915A-A3FC-45BB-A707-097FD81D5D91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AE59045-1640-4526-803E-EAF54106D49E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE59045-1640-4526-803E-EAF54106D49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE59045-1640-4526-803E-EAF54106D49E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE59045-1640-4526-803E-EAF54106D49E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FB7915A-A3FC-45BB-A707-097FD81D5D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB7915A-A3FC-45BB-A707-097FD81D5D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB7915A-A3FC-45BB-A707-097FD81D5D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB7915A-A3FC-45BB-A707-097FD81D5D91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B935F67-AACF-4E72-AA35-4512405C1B71}
+	EndGlobalSection
+EndGlobal
