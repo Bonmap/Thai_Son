@@ -16,11 +16,9 @@ namespace Buoi_08_Mang
             int so_ngau_nhien = 0;
             for (int i = 0; i < mang.Length; i++)
             {
-                while (mang.Contains(so_ngau_nhien))
-                {
-                    so_ngau_nhien = rd.Next(12, 24);
-                }
-                mang[i] = so_ngau_nhien;
+                so_ngau_nhien = rd.Next(12, 24);
+                if (mang.Contains(so_ngau_nhien)) i--;
+                else mang[i] = so_ngau_nhien;
             }
             Console.WriteLine("Cac phan tu cua mang la:");
             for (int i = 0; i < mang.Length; i++)
@@ -70,11 +68,11 @@ namespace Buoi_08_Mang
             c = int.Parse(Console.ReadLine());
             Console.WriteLine("Nhap vao vi tri them vao");
             vi_tri = int.Parse(Console.ReadLine());
-            mang[vi_tri-1] = c;
+            mang[vi_tri - 1] = c;
             Console.WriteLine("Mang sau khi them gia tri vao vi tri " + vi_tri);
             foreach (int item in mang)
             {
-                Console.Write(item+ " | ");
+                Console.Write(item + " | ");
             }
             Console.ReadKey();
         }
