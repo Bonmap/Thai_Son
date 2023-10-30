@@ -14,7 +14,7 @@ namespace Bai_tap_ve_nha
             Console.OutputEncoding = Encoding.Unicode;
             double bai_tap;
             int luot_dem = 4;
-            Console.WriteLine("Bạn muốn làm bài tập mấy (từ bài 1 đến bài 5). Ví dụ: 4");
+            Console.WriteLine("Bạn muốn làm bài tập mấy (từ bài 1 đến bài 7). Ví dụ: 4");
             while (!double.TryParse(Console.ReadLine(), out bai_tap) && bai_tap <= 6)
             {
                 luot_dem--;
@@ -35,6 +35,7 @@ namespace Bai_tap_ve_nha
                 case 4: Console.WriteLine("Thêm phần tử vào array và list (10 phân tử)"); Baitap4(); break;
                 case 5: Console.WriteLine("Tìm phần tử lớn nhất trong array hai chiều"); Baitap5(); break;
                 case 6: Console.WriteLine("Tính tổng các số ở đường chéo chính của ma trận vuông"); Baitap6(); break;
+                case 7: Console.WriteLine("Mảng hai chiều – tạo bản đồ trò chơi MineSweeper"); Baitap7(); break;
                 default: Console.WriteLine("Bài tập này không tồn tại"); break;
             }
             Console.ReadKey();
@@ -205,7 +206,7 @@ namespace Bai_tap_ve_nha
                 }
                 list.Add(temp);
             }
-            
+
             int max = int.MinValue;
             for (int i = 0; i < dai_mang; i++)
             {
@@ -220,7 +221,7 @@ namespace Bai_tap_ve_nha
         {
             int luot_dem = 4;
             int[] array = new int[] { 10, 12, 15, 18, 22, 0, 0, 0, 0, 0 };
-            List<int> list = new List<int>() { 10, 12, 15, 18, 22 };
+            List<int> list = new List<int>() { 10, 12, 15, 18, 22, 0, 0, 0, 0, 0 };
             int gia_tri = -1;
             int vi_tri;
 
@@ -261,7 +262,7 @@ namespace Bai_tap_ve_nha
 
             for (int i = array.Length - 1; i >= vi_tri - 1; i--)
             {
-                array[i] = array[i-1];
+                array[i] = array[i - 1];
             }
             array[vi_tri - 1] = gia_tri;
 
@@ -366,5 +367,74 @@ namespace Bai_tap_ve_nha
             }
             Console.WriteLine("Tổng các số của đường chéo chính của ma trận vuông là: " + total);
         }
+        static void Baitap7()
+        {
+            {
+                string[,] map = {
+            {"*", ".", ".", "."},
+            {".", ".", ".", "."},
+            {".", "*", ".", "."},
+            {".", ".", ".", "."}
+        };
+                int MAP_HEIGHT = map.GetLength(0);
+                int MAP_WIDTH = map.GetLength(1);
+
+                string[,] mapReport = new string[MAP_HEIGHT, MAP_WIDTH];
+                for (int yOrdinate = 0; yOrdinate < MAP_HEIGHT; yOrdinate++)
+                {
+                    for (int xOrdinate = 0; xOrdinate < map.GetLength(0); xOrdinate++)
+                    {
+                        string curentCell = map[yOrdinate, xOrdinate];
+                        if (curentCell.Equals("*"))
+                        {
+                            mapReport[yOrdinate, xOrdinate] = "*";
+                        }
+                        else
+                        {
+                            int[,] NEIGHBOURS_ORDINATE = {
+                        {yOrdinate - 1, xOrdinate - 1}, {yOrdinate - 1, xOrdinate}, {yOrdinate - 1, xOrdinate + 1},
+                        {yOrdinate, xOrdinate - 1}, {yOrdinate, xOrdinate + 1},
+                        {yOrdinate + 1, xOrdinate - 1}, {yOrdinate + 1, xOrdinate}, {yOrdinate + 1, xOrdinate + 1},};
+
+                            int minesAround = 0;
+                            int length = NEIGHBOURS_ORDINATE.GetLength(0);
+                            for (int i = 0; i < length; i++)
+                            {
+                                int xOrdinateOfNeighbour = NEIGHBOURS_ORDINATE[i, 1];
+                                int yOrdinateOfNeighbour = NEIGHBOURS_ORDINATE[i, 0];
+
+                                bool isOutOfMapNeighbour = xOrdinateOfNeighbour < 0
+                                        || xOrdinateOfNeighbour == MAP_WIDTH
+                                        || yOrdinateOfNeighbour < 0
+                                        || yOrdinateOfNeighbour == MAP_HEIGHT;
+                                if (isOutOfMapNeighbour)
+                                {
+                                    continue;
+                                }
+
+                                bool isMineOwnerNeighbour = map[yOrdinateOfNeighbour, xOrdinateOfNeighbour].Equals("*");
+                                if (isMineOwnerNeighbour)
+                                {
+                                    minesAround++;
+                                }
+                            }
+
+                            mapReport[yOrdinate, xOrdinate] = minesAround.ToString();
+                        }
+                    }
+                }
+                for (int yOrdinate = 0; yOrdinate < MAP_HEIGHT; yOrdinate++)
+                {
+                    Console.WriteLine("\n");
+                    for (int xOrdinate = 0; xOrdinate < MAP_WIDTH; xOrdinate++)
+                    {
+                        String currentCellReport = mapReport[yOrdinate, xOrdinate];
+                        Console.Write(currentCellReport);
+                    }
+                }
+                Console.ReadLine();
+            }
+        }
     }
 }
+
