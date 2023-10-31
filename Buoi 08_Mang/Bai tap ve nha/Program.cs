@@ -373,8 +373,8 @@ namespace Bai_tap_ve_nha
                 string[,] map = {
             {"*", ".", ".", "."},
             {".", ".", ".", "."},
-            {".", "*", ".", "."},
-            {".", ".", ".", "."}
+            {".", "*", ".", "*"},
+            {".", "*", ".", "."}
         };
                 int MAP_HEIGHT = map.GetLength(0);
                 int MAP_WIDTH = map.GetLength(1);
@@ -423,9 +423,18 @@ namespace Bai_tap_ve_nha
                         }
                     }
                 }
+                Console.WriteLine("Bản đồ trò chơi MineSweeper:");
+                for (int i = 0; i < map.GetLength(0); i++)
+                {
+                    for (int j = 0; j < map.GetLength(1); j++)
+                    {
+                        Console.Write(map[i, j]);
+                    }
+                    Console.WriteLine(" ");
+                }
                 for (int yOrdinate = 0; yOrdinate < MAP_HEIGHT; yOrdinate++)
                 {
-                    Console.WriteLine("\n");
+                    Console.WriteLine(" ");
                     for (int xOrdinate = 0; xOrdinate < MAP_WIDTH; xOrdinate++)
                     {
                         String currentCellReport = mapReport[yOrdinate, xOrdinate];
