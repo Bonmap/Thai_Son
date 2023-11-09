@@ -58,8 +58,9 @@ namespace CGO_Buoi15_DuAn1
             Console.WriteLine("- Sử dụng các phím mũi tên để di chuyển rắn");
             Console.WriteLine("- Nhấn phím P để tạm dừng");
             Console.WriteLine("- Nhấn phím R để chơi lại");
-            Console.WriteLine("- Nhấn phím Q để chơi lại");
+            Console.WriteLine("- Nhấn phím Q để thoát game");
 
+            keypress = Console.ReadKey(true);
             keypress = Console.ReadKey(true);
             if (keypress.Key == ConsoleKey.Q)
                 Environment.Exit(0);
