@@ -174,7 +174,7 @@ namespace CGO_Buoi15_DuAn1
             {
                 score += 10; nTail++;
                 if (score > 50) speed = 80;
-                else if (score > 50) speed -= 20;
+                else if (score > 20) speed -= 20;
                 // xử lý điểm lớn nhất
                 if (score > highScore)
                 {
