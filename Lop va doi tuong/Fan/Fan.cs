@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Fan
 {
-
-    internal class Fan
+    public class Fan
     {
+        public const int SLOW = 1, MEDIUM = 2, FAST = 3;
         private int speed;
         private bool on;
         private double radius;
@@ -21,15 +21,19 @@ namespace Fan
             this.radius = radius;
             this.color = color;
         }
+
         public int Speed { get => speed; set => speed = value; }
         public bool On { get => on; set => on = value; }
         public double Radius { get => radius; set => radius = value; }
         public string Color { get => color; set => color = value; }
-        
+
         public override string ToString()
         {
-            if (on) return string.Format("Speed: {0} | Color: {1} | Radius: {2} | fan is on!", speed, color, radius);
-            else return string.Format("Color: {0} | Radius: {1}  |  fan is off!",color, radius);
+            if (on)
+            {
+                return string.Format("Speed: {0}| Color: {1}| Radius: {2}| fan is on!", Speed, color, radius);
+            }
+            return string.Format("Color: {0}| Radius: {1}| fan is off!", color, radius);
         }
     }
 }

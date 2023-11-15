@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace Fan
 {
-    internal class Program
+    public class program
     {
-        const int SLOW = 1, MEDIUM = 2, FAST = 3;
         static void Main(string[] args)
         {
-            Fan f1 = new Fan(FAST, true, 10, "yellow");
-            Fan f2 = new Fan(MEDIUM, true, 5, "blue");
-
-            Console.WriteLine(f1.ToString());
-            Console.WriteLine(f2.ToString());
+            Fan fan1 = new Fan(Fan.FAST, true, 10, "yellow");
+            Fan fan2 = new Fan(Fan.MEDIUM, false, 5, "blue");
+            Console.WriteLine(fan1.ToString());
+            Console.WriteLine(fan2.ToString());
             Console.ReadKey();
         }
     }
