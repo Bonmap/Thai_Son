@@ -10,7 +10,6 @@ namespace BTLearn05
     {
         static void Main(string[] args)
         {
-            Time time = new Time();
             QuickSort qS = new QuickSort();
             Random rd = new Random();
             int[] arr = new int[1000];
@@ -30,7 +29,9 @@ namespace BTLearn05
             }
             Console.WriteLine();
 
+            Time time = new Time();
             qS.Quick_Sort(arr, 0, arr.Length - 1);
+            time.Stop();
 
             Console.WriteLine();
             Console.WriteLine("\nIn mang da qua sap xep: ");
@@ -41,9 +42,10 @@ namespace BTLearn05
             }
             Console.WriteLine();
 
-            time.TimeRun();
+            time.GetElapsedTime();
 
             Console.ReadKey();
+            
         }
     }
 }

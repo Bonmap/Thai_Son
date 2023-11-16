@@ -14,9 +14,13 @@ namespace BTLearn05
         {
             this.startTime = DateTime.Now;
         }
-        public void TimeRun()
+        public void Start() { this.startTime = DateTime.Now; }
+        public void Stop() { this.endTime = DateTime.Now; }
+        public DateTime StartTime { get => startTime; }
+        public DateTime EndTime { get => endTime; }
+
+        public void GetElapsedTime()
         {
-            this.endTime = DateTime.Now;
             Console.WriteLine("Time run: {0}", endTime - startTime);
         }
     }
