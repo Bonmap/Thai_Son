@@ -5,23 +5,16 @@ using System.IO;
 
 namespace hinhchunhat
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
-        {
-            Student student = new Student();
-            student.Name = "SonMc";
+        public static int ProductStatus = 1;
+        
 
-            Console.WriteLine(student.Name + "-" + Student.group);
-            Console.WriteLine();
+        static void Main()
+        {
+            int status = ProductStatus;
+            Console.WriteLine(status);
             Console.ReadKey();
         }
-    }
-
-    public class Student
-    {
-        public static string group = "CodeGym";
-        public string Name { get; set; }
-
     }
 }
