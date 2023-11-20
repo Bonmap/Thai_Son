@@ -31,7 +31,7 @@ namespace Class_Point2D_and_Class_Point3D
         public float Y { get => y; set => y = value; }
         public override string ToString()
         {
-            return string.Format("({0},{1})", x, y);
+            return string.Format("({0},{1})", X, Y);
         }
     }
 }
