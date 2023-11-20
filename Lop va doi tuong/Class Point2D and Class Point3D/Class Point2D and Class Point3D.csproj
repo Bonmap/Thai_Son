@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E327B48A-F2D7-46C1-AE91-4302E64013B0}</ProjectGuid>
+    <ProjectGuid>{081A45F3-1D62-4844-9A73-5318A0269922}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>interface__IColorable_</RootNamespace>
-    <AssemblyName>interface ‘IColorable’</AssemblyName>
+    <RootNamespace>Class_Point2D_and_Class_Point3D</RootNamespace>
+    <AssemblyName>Class Point2D and Class Point3D</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Circle.cs" />
+    <Compile Include="Point2D.cs" />
+    <Compile Include="Point3D.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="Shape.cs" />
-    <Compile Include="Square.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

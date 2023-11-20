@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("interface ‘IColorable’")]
+[assembly: AssemblyTitle("Class Point2D and Class Point3D")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("interface ‘IColorable’")]
+[assembly: AssemblyProduct("Class Point2D and Class Point3D")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e327b48a-f2d7-46c1-ae91-4302e64013b0")]
+[assembly: Guid("081a45f3-1d62-4844-9a73-5318a0269922")]
 
 // Version information for an assembly consists of the following four values:
 //

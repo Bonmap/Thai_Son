@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E327B48A-F2D7-46C1-AE91-4302E64013B0}</ProjectGuid>
+    <ProjectGuid>{90AEDE4D-DEB2-4486-AC74-B1440BCD74CE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>interface__IColorable_</RootNamespace>
-    <AssemblyName>interface ‘IColorable’</AssemblyName>
+    <RootNamespace>interface__Resizeable_</RootNamespace>
+    <AssemblyName>interface ‘Resizeable’</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Circle.cs" />
+    <Compile Include="Cricle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />

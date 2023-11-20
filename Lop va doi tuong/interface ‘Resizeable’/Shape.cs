@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace interface__IColorable_
+namespace interface__Resizeable_
 {
     public class Shape
     {

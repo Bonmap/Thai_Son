@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("interface ‘IColorable’")]
+[assembly: AssemblyTitle("interface ‘Resizeable’")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("interface ‘IColorable’")]
+[assembly: AssemblyProduct("interface ‘Resizeable’")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e327b48a-f2d7-46c1-ae91-4302e64013b0")]
+[assembly: Guid("90aede4d-deb2-4486-ac74-b1440bcd74ce")]
 
 // Version information for an assembly consists of the following four values:
 //

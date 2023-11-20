@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace interface__IColorable_
+namespace interface__Resizeable_
 {
-
     public class Circle : Shape
     {
         private double radius = 1.0;
