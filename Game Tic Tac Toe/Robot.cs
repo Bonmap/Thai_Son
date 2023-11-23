@@ -16,12 +16,12 @@ namespace Game_Tic_Tac_Toe
         public int takeTurn()
         {
             Random rd = new Random();
-            int index = rd.Next(0, chooses.Count - 1);
+            int index = rd.Next(0, chooses.Count - 1);  //lựa chọn index từ 0 -> n-1
             return chooses[index];
         }
         public void removeChoose(int value)
         {
-            chooses.Remove(value);
-        }    
+            chooses.Remove(value);  //loại bỏ các giá trị đã được sử dụng
+        }
     }
 }
