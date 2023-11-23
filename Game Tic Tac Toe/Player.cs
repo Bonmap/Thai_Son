@@ -19,10 +19,14 @@ namespace Game_Tic_Tac_Toe
         //nhập ô vị trí của người chơi
         public int takeTurn()
         {
-            int fieldNumber = int.Parse(Console.ReadLine());    //BT: check logic nhập xuất 1-> 9, nếu 10 là chịu thua
+            int fieldNumber;    //BT: check logic nhập xuất 1-> 9, nếu 10 là chịu thua
+            while (!int.TryParse(Console.ReadLine(), out fieldNumber) || fieldNumber > 9 || fieldNumber < 0)
+            {
+                Console.WriteLine("Invalid input. Please enter number between 1- 9!");
+            }
             return fieldNumber;
         }
-        
+
         public bool checkSign(FIELD c1, FIELD c2, FIELD c3)
         {
             //3 ô cùng 1 ký tự X hoặc Y (chắc chắn khác rỗng)
