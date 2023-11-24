@@ -14,6 +14,12 @@ namespace Game_Tic_Tac_Toe
             int luot_dem = 3;
             TicTacToe game = new TicTacToe();
             ShowMenu();
+            //do
+            //{
+            //    Console.Write("your option: ");
+            //    key = int.Parse(Console.ReadLine());
+            //}
+            //while (key != 1 && key != 2 && key != 3);
             while (!int.TryParse(Console.ReadLine(), out key) || key > 3 || key < 0)
             {
                 if (luot_dem > 0)

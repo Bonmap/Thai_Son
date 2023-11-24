@@ -140,8 +140,8 @@ namespace Game_Tic_Tac_Toe
                     //int turn = currentPlayer.takeTurn();    //nhập dữ liệu
                     int turn = (moveCounter % 2 == 0) ? playerX.takeTurn() : playerO.takeTurn(); //##
                     char c = (moveCounter % 2 == 0) ? playerX.Sign : playerO.Sign;               //##
-                    if (!gameBoard.putMark(currentPlayer.Sign, turn))
-                    //if (!gameBoard.putMark(c, turn)) //##
+                    //if (!gameBoard.putMark(currentPlayer.Sign, turn))
+                    if (!gameBoard.putMark(c, turn)) //##
                     {
                         xulySai();
                         goto getTurn;
@@ -149,6 +149,7 @@ namespace Game_Tic_Tac_Toe
                     else
                     {
                         playerO.removeChoose(turn); //##
+                        playerX.removeChoose(turn);
                         gameBoard.clearBoard();
                         moveCounter++;  //tối đa lên tới 9
                         //kiểm tra đã thắng chưa
