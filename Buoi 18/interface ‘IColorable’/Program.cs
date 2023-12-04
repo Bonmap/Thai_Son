@@ -36,6 +36,7 @@ namespace interface__IColorable_
 
             square = new Square(5.8, "yellow", true);
             Console.WriteLine(square);
+            Console.ReadKey();
         }
     }
 }

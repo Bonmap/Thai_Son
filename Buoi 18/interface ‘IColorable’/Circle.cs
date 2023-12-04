@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace interface__IColorable_
 {
-    class Circle
+    class Circle : Shape
     {
         private double radius = 1.0;
 
@@ -19,7 +19,7 @@ namespace interface__IColorable_
             this.radius = radius;
         }
 
-        public Circle(double radius, String color, bool filled) : base(color, filled)
+        public Circle(double radius, String color, bool filled) : base (color, filled)
         {
             this.radius = radius;
         }
